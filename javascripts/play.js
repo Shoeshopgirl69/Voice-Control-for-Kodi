@@ -1,4 +1,3 @@
-// 6/24/2017
 tpePlay = local("%tpe_play").toLowerCase().trim().replace(/ /g,'+');
 deviceIp = '127.0.0.1';
 devicePort = '8080'
