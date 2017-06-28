@@ -1,5 +1,5 @@
 # Voice-Search
-Requirements:
+## Requirements:
   Google Home
   IFTTT account linked to your Google Home
   Nvidia Shield (This should work on any Android box.)
@@ -7,7 +7,7 @@ Requirements:
   Tasker Network Event Server App
   These Tasker profiles, tasks, scenes, and javascripts files
 
-Steps:
+ ## Steps:
   Install the "Tasker" and "Tasker Network Event Server" apps on the Nvidia Shield
   Configure your Nvidia Shield so you can access the storage remotely
   Under the Tasker folder on the Nvidia Shield, create a folder called javascripts  (You should be able to do this on your PC after you mount the Nvidia Shield storage)
@@ -18,11 +18,11 @@ Steps:
   Open up port 8765 on your router to the private IP of your Nvidia Shield
   On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
   
-  Create three IFTTT applets
+## Create three IFTTT applets
   
-  First of three IFTTT applets: (This issues commands)
+### First of three IFTTT applets: (This issues commands)
   Choose "Say a phrase with a text ingredient"
-  For "THIS" choose "Google Assistant"
+  For "THIS" c  3hoose "Google Assistant"
   For "THAT" choose "Maker Webhook"
   Google Assistant
   What do you want to say?: press $ (You can chose any phrase you want, just make it unique.)
@@ -34,7 +34,7 @@ Steps:
   Method: Get
   Content Type: text/plain
   
-  Second of three IFTTT applets: (This launches apps)
+### Second of three IFTTT applets: (This launches apps)
   Choose "Say a phrase with a text ingredient"
   For "THIS" choose "Google Assistant"
   For "THAT" choose "Maker Webhook"
@@ -60,6 +60,6 @@ Steps:
   Method: Get
   Content Type: text/plain
   
-Update: 6/26/2017
+## Update: 6/26/2017
 
   Download and install Secure Setting on the Nvidia Shield then update the javascripts, tasks, and profiles from the above link. Create a new IFTTT applet with a google assistant trigger phrase of "wake up" and a webhook of "http://YourPublicIP:8765?wake". This will allow you to wake up the Nvidia Shield from daydream. The new launch task will allow you to launch amazon video and google movies and TV. You can edit the perform.js script to put in the your channels to control the TV in kodi. You can also have it say things when you issue a voice command. Just uncomment out the section and put in the phrases you want.
