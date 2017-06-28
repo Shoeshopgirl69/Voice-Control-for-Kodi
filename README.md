@@ -22,7 +22,7 @@
   
 ### First of three IFTTT applets: (This issues commands)
 - Choose "Say a phrase with a text ingredient"
-- For "THIS" c  3hoose "Google Assistant"
+- For "THIS" choose "Google Assistant"
 - For "THAT" choose "Maker Webhook"
 - Google Assistant
 - What do you want to say?: press $ (You can chose any phrase you want, just make it unique.)
