@@ -1,4 +1,4 @@
-var tpe_launch = local("%tpe_launch").toLowerCase().trim();
+var tpeLaunch = local("%tpe_launch").toLowerCase().trim();
 
 if (tk.global("%DISPLAYFLASH") == '') {
 	tk.setGlobal("%DISPLAYFLASH",'false');
@@ -6,46 +6,45 @@ if (tk.global("%DISPLAYFLASH") == '') {
 
 if ( tk.global("%DISPLAYFLASH") == "true" ) {
 	flash('Launch Script');
-	flash(tpe_launch);
+	flash(tpeLaunch);
 }
 
-if ( tpe_launch == 'netflix' ) {
-	flash('Netflix');
+if ( tpeLaunch == 'netflix' ) {
 	loadApp('Netflix');
 }
 
-if ( tpe_launch == 'kodi' ) {
+if ( tpeLaunch == 'kodi' ) {
 	loadApp('Kodi');
 }
 
-if ( tpe_launch == 'tasker' ) {
+if ( tpeLaunch == 'tasker' ) {
 	loadApp('Tasker');
 }
 
-if ( tpe_launch == 'live channels' ) {
+if ( tpeLaunch == 'live channels' ) {
 	loadApp('Live Channels');
 }
 
-if ( tpe_launch == 'plex' ) {
+if ( tpeLaunch == 'plex' ) {
 	loadApp('Plex');
 }
 
-if ( tpe_launch == 'youtube' ) {
+if ( tpeLaunch == 'youtube' ) {
 	loadApp('YouTube');
 }
 
-if ( tpe_launch == 'home' ) {
+if ( tpeLaunch == 'home' ) {
 	loadApp('Home Screen');
 }
 
-if ( tpe_launch == 'hulu' ) {
+if ( tpeLaunch == 'hulu' ) {
 	loadApp('Hulu');
 }
 
-if ( tpe_launch == 'fan tv' ) {
+if ( tpeLaunch == 'fan tv' ) {
 	loadApp('Fan TV');
 }
 
-if ( tpe_launch == 'settings' ) {
+if ( tpeLaunch == 'settings' ) {
 	loadApp('Settings');
 }
