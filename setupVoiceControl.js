@@ -1,7 +1,35 @@
-createDir("Tasker/javascripts.backup", true, false);
-createDir("Tasker/javascripts", true, false);
-createDir("Tasker/tasks", true, false);
-createDir("Tasker/profiles", true, false);
+files = listFiles( 'Tasker' );
+arr = files.split( '\n' );
+flash( 'Found ' + arr.length + ' files' );
+numberOfFiles = arr.length;
+
+javascriptsExist = false;
+tasksExist = false;
+profilesExist = false;
+
+for(i = 0; i < numberOfFiles; i++) {
+		if ( arr[i] == '/storage/emulated/0/Tasker/javascripts' ) {
+			javascriptsExist = true;
+		}
+		if ( arr[i] == '/storage/emulated/0/Tasker/tasks' ) {
+			tasksExist = true;
+		}
+		if ( arr[i] == '/storage/emulated/0/Tasker/profiles' ) {
+			profilesExist = true;
+		}		
+}
+
+if (javascriptsExist === false) {
+	createDir("Tasker/javascripts", true, false);
+}
+
+if (tasksExist === false) {
+	createDir("Tasker/tasks", true, false);
+}
+
+if (profilesExist === false) {
+	createDir("Tasker/profiles", true, false);
+}
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/download.js';
 method = 'GET'
@@ -114,6 +142,14 @@ xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/profiles/Launch.prf.xml", contents, false);
+
+url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
+method = 'GET'
+xhttp = new XMLHttpRequest();
+xhttp.open(method, url, false);
+xhttp.send();
+contents = xhttp.responseText;
+writeFile("Tasker/profiles/Perform.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
 method = 'GET'
