@@ -33,7 +33,7 @@ for(i = 0; i < numberOfFiles; i++) {
 		}
 		if ( arr[i] == '/storage/emulated/0/Tasker/profiles' ) {
 			profilesExist = true;
-		}		
+		}
 }
 
 if (javascriptsExist === false) {
