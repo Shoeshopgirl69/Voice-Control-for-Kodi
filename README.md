@@ -1,4 +1,4 @@
-# Voice-Control for Kodi
+# Voice Control for Kodi
 ## Requirements:
 - Google Home
 - IFTTT account linked to your Google Home
@@ -68,5 +68,5 @@ http://yourkodiusername:yourKodiPassword@YourPublicIP:8765?play=<<<Textfield>>>
   
 ## Update: 6/26/2017
 
-- Download and install Secure Setting on the Nvidia Shield then update the javascripts, tasks, and profiles from the above link. Create a new IFTTT applet with a google assistant trigger phrase of "wake up" and a webhook of "http://YourPublicIP:8765?wake". This will allow you to wake up the Nvidia Shield from daydream.
+- Download and install Secure Setting on the Nvidia Shield then update the javascripts, tasks, and profiles from the above link. Create a new IFTTT applet with a google assistant trigger phrase of "wake up" and a webhook of ```http://YourPublicIP:8765?wake```. This will allow you to wake up the Nvidia Shield from daydream.
 - The new launch task will allow you to launch amazon video and google movies and TV. You can edit the perform.js script to put in the your channels to control the TV in kodi. You can also have it say things when you issue a voice command. Just uncomment out the section and put in the phrases you want.
