@@ -1,6 +1,5 @@
 files = listFiles( 'Tasker' );
 arr = files.split( '\n' );
-say('Hi');
 numberOfFiles = arr.length;
 
 javascriptsExist = false;
