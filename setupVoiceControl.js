@@ -1,5 +1,4 @@
 /*
-
     Voice Control for Kodi
     Copyright (C) 2017  Brian Faris
 
@@ -15,8 +14,6 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
 */
 
 files = listFiles( 'Tasker' );
