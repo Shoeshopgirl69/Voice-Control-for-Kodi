@@ -182,5 +182,5 @@ xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/setupVoiceControl.js", contents, false);
 
-// Uncomment out the following line to display README
+// Uncomment out the following line to display README; must have Chrome install on the Nvidia Shield
 // browseURL("https://github.com/brianf21/Voice-Control-for-Kodi/blob/master/README.md");
