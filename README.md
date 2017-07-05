@@ -1,4 +1,4 @@
-# Voice-Search
+# Voice-Control for Kodi
 ## Requirements:
 - Google Home
 - IFTTT account linked to your Google Home
