@@ -176,14 +176,6 @@ xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/auto-import/Perform.prf.xml", contents, false);
 
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/auto-import/Perform.prf.xml", contents, false);
-
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Play.prf.xml';
 method = 'GET'
 xhttp = new XMLHttpRequest();
