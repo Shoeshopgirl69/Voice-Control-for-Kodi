@@ -152,5 +152,13 @@ xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/profiles/Wake.prf.xml", contents, false);
 
+url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/setupVoiceControl.js';
+method = 'GET'
+xhttp = new XMLHttpRequest();
+xhttp.open(method, url, false);
+xhttp.send();
+contents = xhttp.responseText;
+writeFile("Tasker/setupVoiceControl.js", contents, false);
+
 // Uncomment out the following line to display README
 // browseURL("https://github.com/brianf21/Voice-Control-for-Kodi/blob/master/README.md");
