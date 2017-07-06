@@ -169,7 +169,6 @@ if ( mediaType == 'tv' ) {
 		xhttp.send();
 
 		arr = JSON.parse(xhttp.responseText);
-		arr_length = arr.result.files.length;
 
 		for(i = 0; i < arr.result.files.length; i++) {
 			if ( arr.result.files[i].label.startsWith(tvShowTitle) ) {
