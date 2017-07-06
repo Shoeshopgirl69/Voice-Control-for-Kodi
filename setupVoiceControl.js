@@ -35,9 +35,12 @@ for(i = 0; i < numberOfFiles; i++) {
 		if ( arr[i] == '/storage/emulated/0/Tasker/profiles' ) {
 			profilesExist = true;
 		}
+<<<<<<< HEAD
 		if ( arr[i] == '/storage/emulated/0/Tasker/auto-import' ) {
 			autoImportExist = true;
 		}			
+=======
+>>>>>>> c57628f0a61e2039ce28e1e682f8c8920c3d79b2
 }
 
 if (javascriptsExist === false) {
