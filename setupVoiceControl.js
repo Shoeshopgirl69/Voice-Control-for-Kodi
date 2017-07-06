@@ -48,10 +48,6 @@ if (profilesExist === false) {
 	createDir("Tasker/profiles", true, false);
 }
 
-if (autoImportExist === false) {
-	createDir("Tasker/auto-import", true, false);
-}
-
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/download.js';
 method = 'GET'
 xhttp = new XMLHttpRequest();
