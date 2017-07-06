@@ -23,6 +23,7 @@ numberOfFiles = arr.length;
 javascriptsExist = false;
 tasksExist = false;
 profilesExist = false;
+autoImportExist = false;
 
 for(i = 0; i < numberOfFiles; i++) {
 		if ( arr[i] == '/storage/emulated/0/Tasker/javascripts' ) {
@@ -33,7 +34,10 @@ for(i = 0; i < numberOfFiles; i++) {
 		}
 		if ( arr[i] == '/storage/emulated/0/Tasker/profiles' ) {
 			profilesExist = true;
-		}		
+		}
+		if ( arr[i] == '/storage/emulated/0/Tasker/auto-import' ) {
+			autoImportExist = true;
+		}			
 }
 
 if (javascriptsExist === false) {
@@ -46,6 +50,10 @@ if (tasksExist === false) {
 
 if (profilesExist === false) {
 	createDir("Tasker/profiles", true, false);
+}
+
+if (autoImportExist === false) {
+	createDir("Tasker/auto-import", true, false);
 }
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/download.js';
@@ -94,7 +102,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Launch_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Launch_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Perform_Task.tsk.xml';
 method = 'GET'
@@ -102,7 +110,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Perform_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Perform_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Play_Task.tsk.xml';
 method = 'GET'
@@ -110,7 +118,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Play_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Play_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Wake_Task.tsk.xml';
 method = 'GET'
@@ -118,7 +126,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Wake_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Wake_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Download_Task.tsk.xml';
 method = 'GET'
@@ -126,7 +134,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Download_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Download_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Update_Task.tsk.xml';
 method = 'GET'
@@ -134,7 +142,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Update_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Update_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Setup_Task.tsk.xml';
 method = 'GET'
@@ -142,7 +150,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/tasks/Setup_Task.tsk.xml", contents, false);
+writeFile("Tasker/auto-import/Setup_Task.tsk.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Download.prf.xml';
 method = 'GET'
@@ -150,7 +158,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Download.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Download.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Launch.prf.xml';
 method = 'GET'
@@ -158,7 +166,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Launch.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Launch.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
 method = 'GET'
@@ -166,7 +174,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Perform.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Perform.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
 method = 'GET'
@@ -174,7 +182,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Perform.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Perform.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Play.prf.xml';
 method = 'GET'
@@ -182,7 +190,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Play.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Play.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Wake.prf.xml';
 method = 'GET'
@@ -190,7 +198,7 @@ xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/profiles/Wake.prf.xml", contents, false);
+writeFile("Tasker/auto-import/Wake.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/setupVoiceControl.js';
 method = 'GET'
