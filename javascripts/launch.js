@@ -71,3 +71,6 @@ if ( tpeLaunch =='radar' ) {
 	browseURL("http://10.178.0.118:7878");
 }
 
+if ( tpeLaunch =='deluge' ) {
+	browseURL("http://10.178.0.118:8112");
+}
