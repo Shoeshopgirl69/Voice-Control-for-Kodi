@@ -66,3 +66,7 @@ if ( tpeLaunch == 'fan tv' ) {
 if ( tpeLaunch == 'settings' ) {
 	loadApp('Settings');
 }
+
+if ( tpeLaunch =='radar' ) {
+	browseURL("http://10.178.0.118:7878");
+}
