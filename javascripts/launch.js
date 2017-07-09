@@ -70,7 +70,4 @@ if ( tpeLaunch == 'settings' ) {
 if ( tpeLaunch =='radar' ) {
 	browseURL("http://10.178.0.118:7878");
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 090d00085dcb2beb8eafb888b5991b46a11b9d4f
