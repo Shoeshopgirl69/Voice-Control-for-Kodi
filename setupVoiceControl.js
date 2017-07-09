@@ -28,9 +28,11 @@ for(i = 0; i < numberOfFiles; i++) {
 		if ( arr[i] == '/storage/emulated/0/Tasker/javascripts' ) {
 			javascriptsExist = true;
 		}
+	/*
 		if ( arr[i] == '/storage/emulated/0/Tasker/tasks' ) {
 			tasksExist = true;
 		}
+	*/
 		if ( arr[i] == '/storage/emulated/0/Tasker/profiles' ) {
 			profilesExist = true;
 		}		
@@ -39,11 +41,11 @@ for(i = 0; i < numberOfFiles; i++) {
 if (javascriptsExist === false) {
 	createDir("Tasker/javascripts", true, false);
 }
-
+/*
 if (tasksExist === false) {
 	createDir("Tasker/tasks", true, false);
 }
-
+*/
 if (profilesExist === false) {
 	createDir("Tasker/profiles", true, false);
 }
@@ -87,7 +89,7 @@ xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/javascripts/play.js", contents, false);
-
+/*
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/tasks/Launch_Task.tsk.xml';
 method = 'GET'
 xhttp = new XMLHttpRequest();
@@ -135,7 +137,7 @@ xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/tasks/Setup_Task.tsk.xml", contents, false);
-
+*/
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Download.prf.xml';
 method = 'GET'
 xhttp = new XMLHttpRequest();
