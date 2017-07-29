@@ -54,7 +54,7 @@ if (tk.global("%DISPLAYFLASH") == '') {
 }
 
 if ( tk.global("%DISPLAYFLASH") == "true" ) {
-  flash('tpe_play: ' + tpePlay);
+  flash('tpePlay: ' + tpePlay);
 }
 
 // See if Kodi is running
