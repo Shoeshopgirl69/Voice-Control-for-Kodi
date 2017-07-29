@@ -47,14 +47,6 @@ xhttp.send();
 contents = xhttp.responseText;
 writeFile("Tasker/javascripts/download.js", contents, false);
 
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/update.js';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/javascripts/update.js", contents, false);
-
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/launch.js';
 method = 'GET'
 xhttp = new XMLHttpRequest();
