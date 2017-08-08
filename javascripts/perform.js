@@ -98,14 +98,10 @@ if ( tpe_perform == 'skip ahead' ) {
 }
 
 if ( tpe_perform == 'flash off' && tk.global("%DISPLAYFLASH") == "true" ) {
-	url = 'http://' + deviceIp + ':' + devicePort + '/jsonrpc?request={"jsonrpc":"2.0","method":"Settings.SetSettingValue", "params":{"setting":"debug.showloginfo","value":false},"id":1}';
-	sendRequest();
 	tk.setGlobal("%DISPLAYFLASH","false");
 }
 
 if ( tpe_perform == 'flash on' && tk.global("%DISPLAYFLASH") == "false" ) {
-	url = 'http://' + deviceIp + ':' + devicePort + '/jsonrpc?request={"jsonrpc":"2.0","method":"Settings.SetSettingValue", "params":{"setting":"debug.showloginfo","value":false},"id":1}';
-	sendRequest();
 	tk.setGlobal("%DISPLAYFLASH","true");
 }
 
