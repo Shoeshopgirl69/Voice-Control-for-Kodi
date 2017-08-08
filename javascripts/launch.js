@@ -67,6 +67,10 @@ if ( tpeLaunch == 'settings' ) {
 	loadApp('Settings');
 }
 
+if ( tpeLaunch == 'hbo now' ) {
+	loadApp('HBO Now');
+}
+
 if ( tpeLaunch =='radar' ) {
 	browseURL("http://10.178.0.118:7878");
 }
