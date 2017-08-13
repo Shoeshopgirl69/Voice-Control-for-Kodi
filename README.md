@@ -8,13 +8,18 @@
 - These Tasker profiles, tasks, scenes, and javascripts files
 
  ## Steps:
- - Install the "Tasker" and "Tasker Network Event Server" apps on the Nvidia Shield
+ - Install the "Tasker", "Tasker Network Event Server", and "Secure Settings" apps on the Nvidia Shield, all can be found on Google Play
  - Configure your Nvidia Shield so you can access the storage remotely
- - Under the Tasker folder on the Nvidia Shield, create a folder called javascripts  (You should be able to do this on your PC after you mount the Nvidia Shield storage)
- - Copy the javascripts files (see above) to the javascripts folder
- - Copy the xml files (see above) to a respective folders in the Tasker folder in the Nvidia Shield storage (Profiles should be copied to the profiles folder and tasks should be copied to the tasks folder.
- - If you are missing any of the folders, please create them.)
- - Launch Tasker on the Nvidia Shield and import the tasks and profiles (the xml files) into Tasker
+ - Save the following javascript file under the Tasker folder on the Nvidia Shield https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/setupVoiceControl.js  (You should be able to do this on your PC after you mount the Nvidia Shield storage)
+ - In tasker create a new Tasks called "Setup Task"
+ - Add a "Code"/"JavaScript" action then navigate to the javascript from above by clicking on the magnify glass. Go to the Tasker folder then click on setupVoiceControl.js
+ - Click on the back button on the top left corner of the screen to go back to the Task Edit screen
+ - Press the play button on the bottom left corner to download the profiles and the rest of the javascripts files
+ - After it completes, click the back button on the top left corner to return to the Tasks list
+ - Click on the profiles tab to go to the Profiles list
+ - Long press on the Profiles tab to import all of the profiles, import all of the profiles under Tasker/profiles
+ - There should be a total of 5 profiles: Wake, Perform, Launch, Download, and Play
+ - After all the profiles are imported, click the check mark on the top right corner to save everything
  - Open up port 8765 on your router to the private IP of your Nvidia Shield
  - On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
   
