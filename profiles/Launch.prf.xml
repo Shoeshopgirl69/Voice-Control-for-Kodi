@@ -1,6 +1,7 @@
 <TaskerData sr="" dvi="1" tv="4.9u4m">
 	<Profile sr="prof4" ve="2">
 		<cdate>1493874047855</cdate>
+		<clp>true</clp>
 		<edate>1498027330869</edate>
 		<id>4</id>
 		<mid0>6</mid0>
@@ -37,7 +38,7 @@
 	</Profile>
 	<Task sr="task6">
 		<cdate>1488370211567</cdate>
-		<edate>1498027330869</edate>
+		<edate>1502166920345</edate>
 		<id>6</id>
 		<nme>Launch Task</nme>
 		<pri>6</pri>
@@ -116,6 +117,41 @@
 			<Int sr="arg3" val="0"/>
 		</Action>
 		<Action sr="act6" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%tpe_launch</lhs>
+					<op>2</op>
+					<rhs>hbo</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>1563799945</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<com.intangibleobject.securesettings.plugin.extra.BLURB>HBO NOW - [HBO NOW] .splash.SplashActivity</com.intangibleobject.securesettings.plugin.extra.BLURB>
+					<com.intangibleobject.securesettings.plugin.extra.BLURB-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.BLURB-type>
+					<com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION>com.hbo.hbonow.splash.SplashActivity</com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION>
+					<com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION-type>
+					<com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME>com.hbo.hbonow</com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME>
+					<com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME-type>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING>launch_activity</com.intangibleobject.securesettings.plugin.extra.SETTING>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.SETTING-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>HBO NOW - [HBO NOW] .splash.SplashActivity</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.intangibleobject.securesettings.plugin</Str>
+			<Str sr="arg2" ve="3">com.intangibleobject.securesettings.plugin.Activities.TabsActivity</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
 			<code>38</code>
 		</Action>
 	</Task>
