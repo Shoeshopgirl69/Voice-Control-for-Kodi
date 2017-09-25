@@ -18,6 +18,7 @@
 
 tpeDownload = local("%tpe_download").toLowerCase().trim().replace(/ /g,'+');
 deviceIp = '10.178.0.118'; // IP of the computer running Radarr
+networkShareIp = '10.178.100.1'; // IP of the file share
 devicePort = '7878'; // Port that Radarr is listening on
 shareName = 'movies'; // Share name of where movies should be saved
 apiKey = '157ab3cbdf2b143cbf07caab87c6a5ba'
@@ -45,7 +46,7 @@ imagePath = "https://image.tmdb.org/t/p/w640" + arr.results[0].poster_path;
 titleSlug = (movieTitle + " " + tmdbId).replace(/ /g,'-').toLowerCase();
 
 // Send movie info to Radarr - Radarr is configured to use Deluge to download the movie
-jsonData = '{"qualityProfileID":"4","monitored":"true","rootFolderPath":"\\\\\\\\' + deviceIp + '\\\\' + shareName + '","title":"' + movieTitle + '","images":[{"covertype":"poster","url":"' + imagePath + '"}],"titleslug":"' + titleSlug + '","tmdbid":"' + tmdbId + '"}';
+jsonData = '{"qualityProfileID":"4","monitored":"true","rootFolderPath":"\\\\\\\\' + networkShareIp + '\\\\' + shareName + '","title":"' + movieTitle + '","images":[{"covertype":"poster","url":"' + imagePath + '"}],"titleslug":"' + titleSlug + '","tmdbid":"' + tmdbId + '"}';
 url = 'http://' + deviceIp + ':' + devicePort + '/api/movie';
 xhttp = new XMLHttpRequest();
 method = 'POST'
