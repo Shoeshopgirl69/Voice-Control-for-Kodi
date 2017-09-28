@@ -83,3 +83,6 @@ http://YourPublicIP:8765?play=<<<Textfield>>>
 ```
 http://YourPublicIP:8765?wake
 ```
+- For Textfield, click your text ingredient.
+- Method: Get
+- Content Type: text/plain
