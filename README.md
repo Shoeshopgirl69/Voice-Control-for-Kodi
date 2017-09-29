@@ -19,7 +19,7 @@
  - After it completes, click the back button on the top left corner to return to the Tasks list
  - Click on the profiles tab to go to the Profiles list
  - Long press on the Profiles tab and import all of the profiles, the profiles are saved under Tasker/profiles
- - There should be a total of 5 profiles: Wake, Perform, Launch, Download, and Play
+ - There should be a total of 4 profiles: Perform, Launch, Download, and Play
  - After all the profiles are imported, click the check mark on the top right corner to save everything
  - Open up port 8765 on your router to the private IP of your Nvidia Shield
  - On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
