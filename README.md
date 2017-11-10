@@ -23,6 +23,9 @@
  - After all the profiles are imported, click the check mark on the top right corner to save everything
  - Open up port 8765 on your router to the private IP of your Nvidia Shield
  - On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
+ - On another computer, install and configure Radarr
+ - Edit the javascript files and replace the IP's and API keys where needed
+ - Email me if you need help. gmail brian.faris
   
 ## Create four IFTTT applets
   
