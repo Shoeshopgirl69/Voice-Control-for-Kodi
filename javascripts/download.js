@@ -21,7 +21,9 @@ deviceIp = '10.178.0.118'; // IP of the computer running Radarr
 networkShareIp = '10.178.100.1'; // IP of the file share
 devicePort = '7878'; // Port that Radarr is listening on
 shareName = 'movies'; // Share name of where movies should be saved
-apiKey = '157ab3cbdf2b143cbf07caab87c6a5ba'
+apiKeyTheMovieDB = '157ab3cbdf2b143cbf07caab87c6a5ba' // API key for themoviedb; you can replace and use your own apiKey
+apiKeyRadarr = '4e1b73ddefa84185acfce6d261ed3790' // Replace with your Radarr's api key under setting > general
+
 
 if (tk.global("%DISPLAYFLASH") == '') {
 	tk.setGlobal("%DISPLAYFLASH",'false');
@@ -32,7 +34,7 @@ if (tk.global("%DISPLAYFLASH") == 'true') {
 }
 
 // Get movie info
-url = 'https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query=' + tpeDownload + '&language=en-US&api_key=' + apiKey;
+url = 'https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query=' + tpeDownload + '&language=en-US&api_key=' + apiKeyTheMovieDB;
 method = 'GET'
 xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
@@ -52,7 +54,7 @@ xhttp = new XMLHttpRequest();
 method = 'POST'
 xhttp.open(method, url, true);
 xhttp.setRequestHeader("Content-Type", "application/json");
-xhttp.setRequestHeader("X-Api-Key", "4e1b73ddefa84185acfce6d261ed3790");
+xhttp.setRequestHeader("X-Api-Key", apiKeyRadarr);
 
 xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
