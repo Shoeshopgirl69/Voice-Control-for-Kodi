@@ -47,6 +47,8 @@ tmdbId = arr.results[0].id;
 imagePath = "https://image.tmdb.org/t/p/w640" + arr.results[0].poster_path;
 titleSlug = (movieTitle + " " + tmdbId).replace(/ /g,'-').toLowerCase();
 
+flash("You are downloading '" + movieTitle + "'");
+
 // Send movie info to Radarr - Radarr is configured to use Deluge to download the movie
 jsonData = '{"qualityProfileID":"4","monitored":"true","rootFolderPath":"\\\\\\\\' + networkShareIp + '\\\\' + shareName + '","title":"' + movieTitle + '","images":[{"covertype":"poster","url":"' + imagePath + '"}],"titleslug":"' + titleSlug + '","tmdbid":"' + tmdbId + '"}';
 url = 'http://' + deviceIp + ':' + devicePort + '/api/movie';

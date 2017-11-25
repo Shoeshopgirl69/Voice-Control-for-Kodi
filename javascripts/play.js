@@ -95,6 +95,9 @@ if ( tk.global("%DISPLAYFLASH") == "true" ) {
 // Movies
 if ( mediaType == 'movie' ) {
 	movieTitle = encodeURIComponent(arr.results[0].title);
+	
+	flash("You are playing '" + arr.results[0].title + "'");
+	
 	if ( tk.global("%DISPLAYFLASH") == "true" ) {
 		flash(movieTitle);
 	}
