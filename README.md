@@ -8,7 +8,7 @@
 - Secure Settings App
 - These Tasker profiles, tasks, scenes, and javascripts files
 
- ## Steps:
+## Steps:
  - Install the "Tasker", "Tasker Network Event Server", and "Secure Settings" apps on the Nvidia Shield, all can be found on Google Play
  - Configure your Nvidia Shield so you can access the storage remotely
  - Save the following javascript file under the Tasker folder on the Nvidia Shield https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/setupVoiceControl.js  (You should be able to do this on your PC after you mount the Nvidia Shield storage)
@@ -31,22 +31,19 @@
   
 ## Create one IFTTT applet
   
-### IFTTT applet: (This issues commands)
+### IFTTT applet:
 - Choose "Say a phrase with a text ingredient"
 - For "THIS" choose "Google Assistant"
 - For "THAT" choose "Maker Webhook"
 - Google Assistant
 - What do you want to say?: ask jarvis to $ (You can chose any phrase you want, just make it unique.)
 - What do you want the Assistant to say in response? okay
-- Maker Webhook
-```
-http://YourPublicIP:8765?voice=<<<Textfield>>>
-```
-- For Textfield, click your text ingredient.
+- Maker Webhook: ```http://YourPublicIP:8765?voice=<<<Textfield>>>```
+- For Textfield, click your text ingredient
 - Method: Get
 - Content Type: text/plain
   
-  ## Phrases:
+## Phrases:
 ``` 
 Ok Google, ask jarvis to play <movie name>
 Ok Google, ask jarvis to download <movie name>
@@ -56,7 +53,7 @@ OK Google, ask jarvis to show <PVR station label>
 OK Google, ask jarvis to launch <application>
 ```
 
- ## Commands:
+## Commands:
 ```
 pause
 up
