@@ -18,74 +18,67 @@
  - Press the play button on the bottom left corner to download the profiles and the rest of the javascripts files
  - After it completes, click the back button on the top left corner to return to the Tasks list
  - Click on the profiles tab to go to the Profiles list
- - Long press on the Profiles tab and import all of the profiles, the profiles are saved under Tasker/profiles
+ - Long press on the Profiles tab and import the voice profile, the profile is saved under Tasker/profiles
  - There should be a total of 4 profiles: Perform, Launch, Download, and Play
- - After all the profiles are imported, click the check mark on the top right corner to save everything
  - Open up port 8765 on your router to the private IP of your Nvidia Shield
  - On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
- - On another computer, install and configure Radarr
+ - On another computer, install and configure Radarr and Deluge if you are using them
  - Edit the javascript files and replace the IP's and API keys where needed
+ - Install and configure the Trakt plugin in Kodi
+ - Install and configure the Exodus plugin in Kodi
+ - Configure Trakt settings in Exodus
  - Email me if you need help. gmail brian.faris
   
-## Create four IFTTT applets
+## Create one IFTTT applet
   
-### First IFTTT applet: (This issues commands)
+### IFTTT applet: (This issues commands)
 - Choose "Say a phrase with a text ingredient"
 - For "THIS" choose "Google Assistant"
 - For "THAT" choose "Maker Webhook"
 - Google Assistant
-- What do you want to say?: press $ (You can chose any phrase you want, just make it unique.)
-- (Current commands: Look at the perform.js to see a full list of the commands..)
+- What do you want to say?: ask jarvis to $ (You can chose any phrase you want, just make it unique.)
 - What do you want the Assistant to say in response? okay
 - Maker Webhook
 ```
-http://YourPublicIP:8765?perform=<<<Textfield>>>
+http://YourPublicIP:8765?voice=<<<Textfield>>>
 ```
 - For Textfield, click your text ingredient.
 - Method: Get
 - Content Type: text/plain
   
-### Second IFTTT applet: (This launches apps)
-- Choose "Say a phrase with a text ingredient"
-- For "THIS" choose "Google Assistant"
-- For "THAT" choose "Maker Webhook"
-- Google Assistant
-- What do you want to say?: please launch $ (Google Home ignores the word "please", so you can just say "launch app name".)
-- What do you want the Assistant to say in response? launching $
-- Maker Webhook
+  ## Phrases:
+``` 
+Ok Google, ask jarvis to play <movie name>
+Ok Google, ask jarvis to download <movie name>
+Ok Google, ask jarvis to play <TV show name>
+Ok Google, ask jarvis to press <command>
+OK Google, ask jarvis to show <PVR station label>
+OK Google, ask jarvis to launch <application>
 ```
-http://YourPublicIP:8765?launch=<<<Textfield>>>
-```
-- For Textfield, click your text ingredient.
-- Method: Get
-- Content Type: text/plain
- 
-### Third IFTTT applet: (This plays movies or shows)
-- Choose "Say a phrase with a text ingredient"
-- For "THIS" choose "Google Assistant"
-- For "THAT" choose "Maker Webhook"
-- Google Assistant
-- What do you want to say?: please play $ (Google Home ignores the word "please", so you can just say "play movie name" or "play TV show name".)
-- What do you want the Assistant to say in response? showing $
-- Maker Webhook
-```
-http://YourPublicIP:8765?play=<<<Textfield>>>
-```
-- For Textfield, click your text ingredient.
-- Method: Get
-- Content Type: text/plain
 
-### Fourth IFTTT applet: (This wakes the shield)
-- Choose "Say a phrase with a text ingredient"
-- For "THIS" choose "Google Assistant"
-- For "THAT" choose "Maker Webhook"
-- Google Assistant
-- What do you want to say?: please wake up 
-- What do you want the Assistant to say in response? Okay, I'm awake
-- Maker Webhook
+ ## Commands:
 ```
-http://YourPublicIP:8765?wake
+pause
+up
+down
+left
+right
+resume
+exit
+clean
+scan
+stop
+troubleshooting on \\Generates Kodi logs
+troubleshooting off
+flash on \\ Generates toast messages
+flash off
+jump back
+jump ahead
+skip back
+skip ahead
+select
+enter
+back
+context
+long press
 ```
-- For Textfield, click your text ingredient.
-- Method: Get
-- Content Type: text/plain

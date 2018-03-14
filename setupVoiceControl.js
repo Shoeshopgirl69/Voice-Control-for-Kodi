@@ -41,77 +41,21 @@ if (profilesExist === false) {
 	createDir("Tasker/profiles", true, false);
 }
 
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/download.js';
+url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/voice.js';
 method = 'GET'
 xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/javascripts/download.js", contents, false);
+writeFile("Tasker/javascripts/voice.js", contents, false);
 
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/launch.js';
+url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Voice.prf.xml';
 method = 'GET'
 xhttp = new XMLHttpRequest();
 xhttp.open(method, url, false);
 xhttp.send();
 contents = xhttp.responseText;
-writeFile("Tasker/javascripts/launch.js", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/perform.js';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/javascripts/perform.js", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/javascripts/play.js';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/javascripts/play.js", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Download.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/profiles/Download.prf.xml", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Launch.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/profiles/Launch.prf.xml", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Perform.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/profiles/Perform.prf.xml", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Play.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/profiles/Play.prf.xml", contents, false);
-
-url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/profiles/Wake.prf.xml';
-method = 'GET'
-xhttp = new XMLHttpRequest();
-xhttp.open(method, url, false);
-xhttp.send();
-contents = xhttp.responseText;
-writeFile("Tasker/profiles/Wake.prf.xml", contents, false);
+writeFile("Tasker/profiles/Voice.prf.xml", contents, false);
 
 url = 'https://raw.githubusercontent.com/brianf21/Voice-Control-for-Kodi/master/setupVoiceControl.js';
 method = 'GET'
