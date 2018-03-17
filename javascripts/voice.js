@@ -361,7 +361,7 @@ function main() {
 			sendJSONData();
 		}
 
-		if ( payload == 'exodus' ) {
+		if ( payload == 'streamer' ) {
 			JSONData = '{"jsonrpc":"2.0","method":"GUI.ActivateWindow","params":{"window":"videos","parameters":["plugin://' + tk.global("%PLUGIN") + '"]},"id":1}';
 			sendJSONData();
 		}
