@@ -17,6 +17,7 @@
 */
 
 tk.setGlobal("%DISPLAYFLASH",'');
+tk.setGlobal("%PLUGIN",'plugin.video.exodus');
 
 files = listFiles( 'Tasker' );
 arr = files.split( '\n' );
