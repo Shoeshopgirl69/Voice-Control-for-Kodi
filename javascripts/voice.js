@@ -36,6 +36,7 @@ function main() {
 	}
 	
 	var flashStatus = tk.global("%DISPLAYFLASH");
+	var videoPlugin = tk.global("%PLUGIN");
 
 	var command = payload.replace(/\ .*/,'');
 	var re = new RegExp(command, "g");
@@ -50,6 +51,7 @@ function main() {
 	if ( flashStatus == "true" ) {
 		flash(command);
 		flash(payload);
+		flash(videoPlugin);
 	}
 
 	function sendJSONData() {
@@ -108,7 +110,7 @@ function main() {
 				}
 				
 				traktUrl = encodeURIComponent("http://api.trakt.tv/search/movie?limit=1&page=1&query=" + movieTitle);
-				JSONData = '{"id": 1, "jsonrpc": "2.0", "method": "Files.GetDirectory","params":{"directory":"plugin://' + tk.global("%PLUGIN") + '/?action=moviePage&url=' + traktUrl + '" } }';
+				JSONData = '{"id": 1, "jsonrpc": "2.0", "method": "Files.GetDirectory","params":{"directory":"plugin://' + videoPlugin + '/?action=moviePage&url=' + traktUrl + '" } }';
 				sendJSONData();
 				movieName = arr.result.files[0].file;
 				JSONData = '{"id":1,"jsonrpc":"2.0","method":"Player.Open","params":{"item":{"file":"' + movieName + '"},"options":{"resume":true}}}';
@@ -143,7 +145,7 @@ function main() {
 			
 			// Look for the show in Exodus and find the next unwatched episode in Trakt
 			if ( xhttp.responseText == '{"id":"libTvShows","jsonrpc":"2.0","result":{"limits":{"end":0,"start":0,"total":0}}}' ) {
-				JSONData = '{"id":1,"jsonrpc":"2.0","method": "Files.GetDirectory","params":{"directory":"plugin://' + tk.global("%PLUGIN") + '/?action=calendar&url=progress"}}}';
+				JSONData = '{"id":1,"jsonrpc":"2.0","method": "Files.GetDirectory","params":{"directory":"plugin://' + videoPlugin + '/?action=calendar&url=progress"}}}';
 				sendJSONData();
 
 				for(i = 0; i < arr.result.files.length; i++) {
@@ -163,7 +165,7 @@ function main() {
 				catch(error) {
 					if ( error.message == 'episodeInfo is not defined' ){
 						traktUrl = encodeURIComponent("http://api.trakt.tv/search/show?limit=1&page=1&query=" + tvShowTitleEncoded);
-						JSONData = '{"id": 1, "jsonrpc": "2.0", "method": "Files.GetDirectory","params":{"directory":"plugin://' + tk.global("%PLUGIN") + '/?action=tvshowPage&url=' + traktUrl + '" } }';
+						JSONData = '{"id": 1, "jsonrpc": "2.0", "method": "Files.GetDirectory","params":{"directory":"plugin://' + videoPlugin + '/?action=tvshowPage&url=' + traktUrl + '" } }';
 						sendJSONData();
 
 						showInfo = (arr.result.files[0].file.replace("action=seasons","action=episodes") + "&season=1");
@@ -362,7 +364,7 @@ function main() {
 		}
 
 		if ( payload == 'streamer' ) {
-			JSONData = '{"jsonrpc":"2.0","method":"GUI.ActivateWindow","params":{"window":"videos","parameters":["plugin://' + tk.global("%PLUGIN") + '"]},"id":1}';
+			JSONData = '{"jsonrpc":"2.0","method":"GUI.ActivateWindow","params":{"window":"videos","parameters":["plugin://' + videoPlugin + '"]},"id":1}';
 			sendJSONData();
 		}
 
