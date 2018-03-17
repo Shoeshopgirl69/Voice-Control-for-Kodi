@@ -27,8 +27,9 @@
  - On the Nvidia Shield, launch Kodi and turn on the web server ("Setting > Service Settings > Control"; set username and password)
  - On another computer, install and configure Radarr and Deluge if you are using them
  - Edit the javascript file and replace the IP's and API keys where needed
+ - Edit the javascript file and comment out the repo you are not using
  - Install and configure the Trakt plugin in Kodi
- - Install and configure the Exodus plugin in Kodi
+ - Install and configure the Exodus or the Neptune Rising plugin in Kodi
  - Configure Trakt settings in Exodus
  - Email me if you need help. gmail brian.faris
   
