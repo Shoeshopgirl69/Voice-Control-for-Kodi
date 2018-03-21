@@ -1,8 +1,8 @@
 <TaskerData sr="" dvi="1" tv="5.1m">
-	<Profile sr="prof5" ve="2">
-		<cdate>1521042817958</cdate>
-		<edate>1521042925610</edate>
-		<id>5</id>
+	<Profile sr="prof6" ve="2">
+		<cdate>1521043258444</cdate>
+		<edate>1521644319494</edate>
+		<id>6</id>
 		<mid0>11</mid0>
 		<nme>Voice</nme>
 		<Event sr="con0" ve="2">
@@ -37,18 +37,77 @@
 	</Profile>
 	<Task sr="task11">
 		<cdate>1492702955236</cdate>
-		<edate>1521011385532</edate>
+		<edate>1521644486208</edate>
 		<id>11</id>
 		<nme>Voice Task</nme>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
+			<code>1563799945</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<com.intangibleobject.securesettings.plugin.extra.BLURB>Screen &amp; Keyboard Lights On
+1 Second</com.intangibleobject.securesettings.plugin.extra.BLURB>
+					<com.intangibleobject.securesettings.plugin.extra.BLURB-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.BLURB-type>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING>wake_device</com.intangibleobject.securesettings.plugin.extra.SETTING>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.SETTING-type>
+					<com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_DURATION>1000</com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_DURATION>
+					<com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_DURATION-type>java.lang.Long</com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_DURATION-type>
+					<com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_TYPE>full</com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_TYPE>
+					<com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_TYPE-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.WAKE_LOCK_TYPE-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>Screen &amp; Keyboard Lights On
+1 Second</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.intangibleobject.securesettings.plugin</Str>
+			<Str sr="arg2" ve="3">com.intangibleobject.securesettings.plugin.Activities.TabsActivity</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
 			<code>131</code>
 			<Str sr="arg0" ve="3">Tasker/javascripts/voice.js</Str>
 			<Str sr="arg1" ve="3"/>
 			<Int sr="arg2" val="1"/>
 			<Int sr="arg3" val="45"/>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act2" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%tpe_voice</lhs>
+					<op>2</op>
+					<rhs>launch hdhomerun</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>1563799945</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<com.intangibleobject.securesettings.plugin.extra.BLURB>HDHomeRun - [HDHomeRun] .MediaCodecPlayer</com.intangibleobject.securesettings.plugin.extra.BLURB>
+					<com.intangibleobject.securesettings.plugin.extra.BLURB-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.BLURB-type>
+					<com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION>com.silicondust.view.MediaCodecPlayer</com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION>
+					<com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.EXTRA_SPINNER_OPTION-type>
+					<com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME>com.silicondust.view</com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME>
+					<com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.PACKAGE_NAME-type>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING>launch_activity</com.intangibleobject.securesettings.plugin.extra.SETTING>
+					<com.intangibleobject.securesettings.plugin.extra.SETTING-type>java.lang.String</com.intangibleobject.securesettings.plugin.extra.SETTING-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>HDHomeRun - [HDHomeRun] .MediaCodecPlayer</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.intangibleobject.securesettings.plugin</Str>
+			<Str sr="arg2" ve="3">com.intangibleobject.securesettings.plugin.Activities.TabsActivity</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act5" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -58,7 +117,7 @@
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act6" ve="7">
 			<code>1563799945</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -80,7 +139,7 @@
 			<Str sr="arg2" ve="3">com.intangibleobject.securesettings.plugin.Activities.TabsActivity</Str>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act3" ve="7">
+		<Action sr="act7" ve="7">
 			<code>38</code>
 		</Action>
 	</Task>
