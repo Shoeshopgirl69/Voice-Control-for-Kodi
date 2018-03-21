@@ -16,9 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-tk.setGlobal("%DISPLAYFLASH",'');
-tk.setGlobal("%PLUGIN",'plugin.video.exodus');
-
 files = listFiles( 'Tasker' );
 arr = files.split( '\n' );
 numberOfFiles = arr.length;

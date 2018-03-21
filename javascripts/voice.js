@@ -35,6 +35,10 @@ function main() {
 		tk.setGlobal("%DISPLAYFLASH",'false');
 	}
 	
+	if (tk.global("%PLUGIN") == '') {
+		tk.setGlobal("%PLUGIN",'plugin.video.exodus');
+	}
+	
 	var flashStatus = tk.global("%DISPLAYFLASH");
 	var videoPlugin = tk.global("%PLUGIN");
 
