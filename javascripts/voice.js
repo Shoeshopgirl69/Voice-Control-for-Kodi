@@ -39,8 +39,8 @@ function main() {
 		tk.setGlobal('%PLUGIN','plugin.video.exodus');
 	}
 	
-	var flashStatus = tk.global("%DISPLAYFLASH");
-	var videoPlugin = tk.global("%PLUGIN");
+	var flashStatus = tk.global('%DISPLAYFLASH');
+	var videoPlugin = tk.global('%PLUGIN');
 
 	var command = payload.replace(/\ .*/,'');
 	var re = new RegExp(command, "g");
