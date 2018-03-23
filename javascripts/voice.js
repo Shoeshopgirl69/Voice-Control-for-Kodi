@@ -60,7 +60,7 @@ function main() {
 
 	function sendJSONData() {
 		
-		if ( flashStatus == 'true ) {
+		if ( flashStatus == 'true' ) {
 			flash(JSONData);
 		}
 		
