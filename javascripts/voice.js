@@ -52,7 +52,7 @@ function main() {
 	var xhttp;
 	var arr;
 	
-	if ( flashStatus == "true" ) {
+	if ( flashStatus == 'true' ) {
 		flash(command);
 		flash(payload);
 		flash(videoPlugin);
@@ -60,7 +60,7 @@ function main() {
 
 	function sendJSONData() {
 		
-		if ( flashStatus == "true" ) {
+		if ( flashStatus == 'true ) {
 			flash(JSONData);
 		}
 		
@@ -309,11 +309,11 @@ function main() {
 			sendJSONData();
 		}
 
-		if ( payload == 'flash off' && tk.global("%DISPLAYFLASH") == "true" ) {
+		if ( payload == 'flash off' && flashStatus == "true" ) {
 			tk.setGlobal("%DISPLAYFLASH","false");
 		}
 
-		if ( payload == 'flash on' && tk.global("%DISPLAYFLASH") == "false" ) {
+		if ( payload == 'flash on' && flashStatus == "false" ) {
 			tk.setGlobal("%DISPLAYFLASH","true");
 		}
 	
