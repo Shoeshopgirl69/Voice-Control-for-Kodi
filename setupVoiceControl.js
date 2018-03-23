@@ -16,7 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-main() {
+function main() {
 
 	files = listFiles( 'Tasker' );
 	arr = files.split( '\n' );
