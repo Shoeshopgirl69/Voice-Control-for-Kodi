@@ -31,12 +31,12 @@ function main() {
 	
 	payload = local("%tpe_voice").toLowerCase().trim();
 
-	if (tk.global("%DISPLAYFLASH") == '') {
-		tk.setGlobal("%DISPLAYFLASH",'false');
+	if (tk.global('%DISPLAYFLASH') == '') {
+		tk.setGlobal('%DISPLAYFLASH','false');
 	}
 	
-	if (tk.global("%PLUGIN") == '') {
-		tk.setGlobal("%PLUGIN",'plugin.video.exodus');
+	if (tk.global('%PLUGIN') == '') {
+		tk.setGlobal('%PLUGIN','plugin.video.exodus');
 	}
 	
 	var flashStatus = tk.global("%DISPLAYFLASH");
