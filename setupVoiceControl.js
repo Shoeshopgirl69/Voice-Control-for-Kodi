@@ -20,6 +20,9 @@ files = listFiles( 'Tasker' );
 arr = files.split( '\n' );
 numberOfFiles = arr.length;
 
+tk.setGlobal("%DISPLAYFLASH",'');
+tk.setGlobal("%PLUGIN",'');
+
 javascriptsExist = false;
 profilesExist = false;
 
