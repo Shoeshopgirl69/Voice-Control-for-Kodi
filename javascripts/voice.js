@@ -123,7 +123,7 @@ function main() {
 
 			// Play local
 			else {
-				if ( flashStatus == "true" ) {
+				if ( flashStatus == 'true' ) {
 					flash('Local media');
 				}				
 				movieId = arr.result.movies[0].movieid;
@@ -309,11 +309,11 @@ function main() {
 			sendJSONData();
 		}
 
-		if ( payload == 'flash off' && flashStatus == "true" ) {
+		if ( payload == 'flash off' && flashStatus == 'true' ) {
 			tk.setGlobal("%DISPLAYFLASH","false");
 		}
 
-		if ( payload == 'flash on' && flashStatus == "false" ) {
+		if ( payload == 'flash on' && flashStatus == 'false' ) {
 			tk.setGlobal("%DISPLAYFLASH","true");
 		}
 	
