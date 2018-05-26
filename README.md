@@ -40,8 +40,8 @@
 - For "THIS" choose "Google Assistant"
 - For "THAT" choose "Maker Webhook"
 - Google Assistant
-- What do you want to say?: ask jarvis to $ (You can chose any phrase you want, just make it unique.)
-- What do you want the Assistant to say in response? okay
+- What do you want to say?: could you $ (You can chose any phrase you want, just make it unique.)
+- What do you want the Assistant to say in response? i'll $ for you
 - Maker Webhook: ```http://YourPublicIP:8765?voice=<<<Textfield>>>```
 - For Textfield, click your text ingredient
 - Method: Get
