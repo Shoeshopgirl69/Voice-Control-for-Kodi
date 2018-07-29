@@ -20,14 +20,14 @@ function main() {
 
 	var KodiIP = '127.0.0.1';
 	var KodiPort = '8080'
-	var RadarrIP = '10.178.0.118';
+	var RadarrIP = '0.0.0.0';
 	var RadarrPort = '7878';
-	var DelugeIP = '10.178.0.118';
+	var DelugeIP = '0.0.0.0';
 	var DelugePort = '8112';
-	var NetworkShareIP = '10.178.0.100'; // The hostname or IP for Radarr to save to. Example: \\This Part of the UNC\sharename
+	var NetworkShareIP = '0.0.0.0'; // The hostname or IP for Radarr to save to. Example: \\This Part of the UNC\sharename
 	var ShareName = 'movies'; // The share name for Radarr. Example: \\hostname\This part of the UNC
-	var apiKeyTheMovieDB = '157ab3cbdf2b143cbf07caab87c6a5ba'; // If this stops working, you can get your own key
-	var apiKeyRadarr = '4e1b73ddefa84185acfce6d261ed3790'; // Replace with your Radarr's api key under setting > general
+	var apiKeyTheMovieDB = ''; // If this stops working, you can get your own key
+	var apiKeyRadarr = ''; // Replace with your Radarr's api key under setting > general
 	
 	payload = local("%tpe_voice").toLowerCase().trim();
 
